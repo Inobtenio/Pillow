@@ -2661,7 +2661,7 @@ def fromarray(obj, mode=None):
         if hasattr(obj, "tobytes"):
             obj = obj.tobytes()
         else:
-            obj = obj.tostring()
+            obj = str(obj)#.tostring()
 
     return frombuffer(mode, size, obj, "raw", rawmode, 0, 1)
 
